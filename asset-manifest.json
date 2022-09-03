@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/adopets-app/static/css/main.da371b3c.css",
+    "main.js": "/adopets-app/static/js/main.2108ffb7.js",
+    "index.html": "/adopets-app/index.html",
+    "main.da371b3c.css.map": "/adopets-app/static/css/main.da371b3c.css.map",
+    "main.2108ffb7.js.map": "/adopets-app/static/js/main.2108ffb7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.da371b3c.css",
+    "static/js/main.2108ffb7.js"
+  ]
+}
