@@ -26,7 +26,7 @@ const Login = () => {
     
 
     const location=useLocation()
-    const from=location?.state?.from?.pathname || '/adopets-app/'
+    const from=location?.state?.from || '/adopets-app/'
 
     //methods
     const handleLogin=async (e)=>{
@@ -39,6 +39,7 @@ const Login = () => {
           password:pwd
         }})
         localStorage.setItem("logged", true);
+        console.log(location.state)
         navTo(from)  
       } catch (error){ 
         setMsg(error?.message)

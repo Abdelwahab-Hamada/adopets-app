@@ -2,8 +2,6 @@ import { ApolloClient, InMemoryCache,split } from '@apollo/client';
 import { getMainDefinition } from '@apollo/client/utilities';
 import { createUploadLink } from 'apollo-upload-client';
 import { WebSocketLink } from 'apollo-link-ws';
-import { ApolloLink } from 'apollo-link';
-
 
 const WS_URL='wss://app-adopets.herokuapp.com/pets/'
 const HTTP_URL='https://app-adopets.herokuapp.com/pets/'
@@ -16,7 +14,8 @@ const httpLink=createUploadLink({
 const wsLink = new WebSocketLink({
     uri: WS_URL,
     options: {
-        reconnect: true
+        reconnect: true,
+        lazy:true
     }
   });
 

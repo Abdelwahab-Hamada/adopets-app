@@ -9,8 +9,8 @@ const PostAd = () => {
   return (
     <div>
         <Popover className=" w-fit  ">
-          <Popover.Button  className={` relative focus:outline-none pt-1.5`}>
-            <PencilIcon className= {` peer ... bg-white/40  rounded p-0.5 w-6`}/>
+          <Popover.Button  className={` relative h-full shadowy rounded-full focus:outline-none`}>
+            <PencilIcon className= {` peer ... w-9 p-2 bg-black/25 text-white  hover:w-10 hover:p-2.5 ease-in-out duration-200 rounded-full`}/>
             <span className="hidden absolute peer-hover:block whitespace-nowrap bg-black/50 text-white px-1 rounded left-full bottom-1 text-xs font-bold">Post Ad</span>
 
           </Popover.Button>

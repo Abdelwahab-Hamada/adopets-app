@@ -12,24 +12,27 @@ const Header = () => {
 
 
   return (
-    <div className="absolute w-full right-0 px-2 gap-2 flex text-black/25 bg-black/25 rounded justify-between z-10   ">
-        <div className="gap-2 w-full h-fit flex ">        
+    <div className="absolute w-full right-0 px-2 flex text-black/25 bg-black/25 rounded z-10 h-8">
+        <div className="h-fit">        
           {logged 
             ? (<div className=" gap-2 w-full h-fit flex ">   
                 
                 <div className="absolute top-9 left-1 sm:bottom-9">
                 <Notifications />
+                <PostAd/>
 
                 </div>
-                <PostAd/>
 
               </div>)
             : ""
           }
-          <div className="gap-2 w-full h-fit flex flex-col ">   
-            <Nav />
-          </div>
+          
+        </div>
+        <div className="gap-2 w-full h-fit flex justify-between ">   
+          <Nav />
+          <img alt="Adopets Logo" className=" w-32" src={process.env.PUBLIC_URL+"/logo192.png"} />
           <User />
+
         </div>
     </div>
   )
