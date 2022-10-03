@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/adopets-app/static/css/main.da371b3c.css",
-    "main.js": "/adopets-app/static/js/main.2108ffb7.js",
+    "main.css": "/adopets-app/static/css/main.8ecebc83.css",
+    "main.js": "/adopets-app/static/js/main.7a239448.js",
     "index.html": "/adopets-app/index.html",
-    "main.da371b3c.css.map": "/adopets-app/static/css/main.da371b3c.css.map",
-    "main.2108ffb7.js.map": "/adopets-app/static/js/main.2108ffb7.js.map"
+    "main.8ecebc83.css.map": "/adopets-app/static/css/main.8ecebc83.css.map",
+    "main.7a239448.js.map": "/adopets-app/static/js/main.7a239448.js.map"
   },
   "entrypoints": [
-    "static/css/main.da371b3c.css",
-    "static/js/main.2108ffb7.js"
+    "static/css/main.8ecebc83.css",
+    "static/js/main.7a239448.js"
   ]
 }
