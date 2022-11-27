@@ -1,12 +1,12 @@
 import {useState,useRef} from 'react'
-import { useQuery,useMutation,gql, } from '@apollo/client'
+import { useQuery,useMutation, } from '@apollo/client'
 import requestPetMutation from '../gql/mutations/reqPet'
-import {PlusIcon,ArrowCircleUpIcon,RefreshIcon } from '@heroicons/react/solid'
+import {PlusIcon, } from '@heroicons/react/solid'
 
 
 const Pets = ({query}) => {
-    const {loading,data,error,refetch,}=useQuery(query,{fetchPolicy:'no-cache'})
-    const [request,{data:response}]=useMutation(requestPetMutation,)
+    const {loading,data,}=useQuery(query,{fetchPolicy:'no-cache'})
+    const [request]=useMutation(requestPetMutation,)
     const [hidden,setHidden]=useState('hidden')
     const [inner,setInner]=useState('test')
     const img=useRef()
@@ -40,9 +40,12 @@ const Pets = ({query}) => {
             {data?.pets.map((pet)=>(
                 <div className='relative mb-5 ' key={pet.id}>
                     <h1 className=' rounded-tl-lg rounded-br-lg  absolute bg-black/25 font-bold  px-2 text-white'>{pet.name}</h1>
-                    <img className=' gallery-img rounded-lg '  src={pet.photo} onClick={()=>{
+                    <img loading='lazy' alt={pet.name} className=' gallery-img rounded-lg '  src={pet.photo} onClick={()=>{
                         setHidden('fadeOut-it-timeless')
-                        setInner(<img className='shadowy object-cover w-fit h-fit ' src={pet.photo}/>)
+                        setInner(<div className='relative'>
+                            <img alt={pet.name} className='shadowy object-cover w-fit h-fit ' src={pet.photo}/>
+                            <h1 className='  rounded-br-lg  absolute bg-black/25 font-bold top-0 px-2 text-white'>age: {pet.age} d</h1>
+                        </div>)
                         }}/>
                     <button className='absolute  -bottom-3 shadowy rounded-full right-2 ' onClick={()=>{
                         request({variables:{id:pet.id}})

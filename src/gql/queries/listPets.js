@@ -6,6 +6,7 @@ const petsQuery=gql`
                 id
                 name
                 photo
+                age
                 }
             }
 `
