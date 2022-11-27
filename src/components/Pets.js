@@ -24,13 +24,20 @@ const Pets = ({query}) => {
         </div>
     )
 
+    if(!data.pets.length) return (
+        
+        <div className='py-11 w-full h-full flex justify-center'>
+            <p>No pets yet click on pen to post a pet.</p>
+        </div>
+    )
+
     return (
     <div className=' h-full overflow-auto scrollbar p-5 py-11'>
         <div ref={img} className={` p-10 flex justify-center items-center bg-black/25 h-full absolute w-full left-0 top-0 z-10 ${hidden} cursor-pointer`} onClick={()=>setHidden('fadeOut-it-timeless-close ')}>
             {inner}
         </div>
         <div className='sm:columns-1 md:columns-2 lg:columns-3 gap-5'>
-            {data.pets.map((pet)=>(
+            {data?.pets.map((pet)=>(
                 <div className='relative mb-5 ' key={pet.id}>
                     <h1 className=' rounded-tl-lg rounded-br-lg  absolute bg-black/25 font-bold  px-2 text-white'>{pet.name}</h1>
                     <img className=' gallery-img rounded-lg '  src={pet.photo} onClick={()=>{

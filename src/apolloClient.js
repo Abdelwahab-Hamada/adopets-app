@@ -3,8 +3,8 @@ import { getMainDefinition } from '@apollo/client/utilities';
 import { createUploadLink } from 'apollo-upload-client';
 import { WebSocketLink } from 'apollo-link-ws';
 
-const WS_URL='wss://app-adopets.herokuapp.com/pets/'
-const HTTP_URL='https://app-adopets.herokuapp.com/pets/'
+const WS_URL='wss://adopets.pythonanywhere.com/pets/'
+const HTTP_URL='https://adopets.pythonanywhere.com/pets/'
 
 const httpLink=createUploadLink({
   uri: HTTP_URL,
